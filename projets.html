@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément - Projets</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: #f8f9fa; color: #212529; }
+        
+        header { background: #ffffff; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
+        header h1 { margin: 0; font-size: 24px; color: #0f172a; letter-spacing: 1px; }
+        nav { margin-top: 15px; }
+        nav a { text-decoration: none; color: #64748b; font-weight: 600; margin: 0 15px; padding: 5px 10px; transition: color 0.3s ease; }
+        nav a:hover { color: #2563eb; }
+        nav a.active { color: #2563eb; border-bottom: 2px solid #2563eb; }
+        
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        h2 { color: #0f172a; text-align: center; font-size: 32px; margin-bottom: 40px; }
+        
+        /* Grille pour les projets */
+        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+        
+        /* Carte Projet */
+        .project-card { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-left: 5px solid #2563eb; transition: transform 0.3s ease; }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-title { font-size: 22px; color: #0f172a; margin-top: 0; margin-bottom: 10px; }
+        .project-tags { margin-bottom: 15px; }
+        .tag { background: #eff6ff; color: #2563eb; padding: 5px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-right: 8px; display: inline-block; }
+        .project-desc { color: #475569; line-height: 1.6; margin-bottom: 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clément</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À propos</a>
+            <a href="cv.html">Mon CV</a>
+            <a href="projets.html" class="active">Projets</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Mes Réalisations</h2>
+        
+        <div class="projects-grid">
+            
+            <!-- Projet 1 : Alternance -->
+            <div class="project-card">
+                <h3 class="project-title">Instrumentation & Automatisation de tests</h3>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Tkinter</span>
+                    <span class="tag">Yoctopuce</span>
+                    <span class="tag">Mesures Physiques</span>
+                </div>
+                <p class="project-desc">
+                    Dans le cadre de mon alternance dans le secteur de la fabrication additive, j'ai développé une application d'interface avec Python (Tkinter). Ce projet intègre des capteurs Yoctopuce pour automatiser des protocoles de mesure sur des bancs de test, incluant la génération automatique de rapports de maintenance au format PDF et Excel.
+                </p>
+            </div>
+
+            <!-- Projet 2 : Robotique -->
+            <div class="project-card">
+                <h3 class="project-title">Développement Robotique Autonome</h3>
+                <div class="project-tags">
+                    <span class="tag">ROS2</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">RoboDK</span>
+                    <span class="tag">TurtleBot4</span>
+                </div>
+                <p class="project-desc">
+                    Programmation d'un robot autonome TurtleBot4 sous environnement ROS2. Le projet inclut l'intégration d'un flux vidéo, la détection de contours et le suivi de couleurs grâce aux masques HSV avec OpenCV. J'ai également réalisé des simulations de bras robotiques industriels avec RoboDK et NumPy.
+                </p>
+            </div>
+
+            <!-- Projet 3 : Web / E-commerce -->
+            <div class="project-card">
+                <h3 class="project-title">Développement Web & E-commerce</h3>
+                <div class="project-tags">
+                    <span class="tag">HTML/CSS/JS</span>
+                    <span class="tag">Shopify Liquid</span>
+                </div>
+                <p class="project-desc">
+                    Conception, configuration et personnalisation de plateformes e-commerce pour la vente de pièces d'horlogerie vintage. Modification approfondie de templates avec le langage Liquid et intégration d'interfaces web adaptatives.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
