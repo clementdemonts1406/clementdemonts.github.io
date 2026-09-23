@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément - Projet Safran</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: #f8f9fa; color: #212529; }
+        
+        header { background: #ffffff; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
+        header h1 { margin: 0; font-size: 24px; color: #0f172a; letter-spacing: 1px; }
+        nav { margin-top: 15px; }
+        nav a { text-decoration: none; color: #64748b; font-weight: 600; margin: 0 15px; padding: 5px 10px; transition: color 0.3s ease; }
+        nav a:hover { color: #2563eb; }
+        
+        .container { max-width: 900px; margin: 50px auto; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        
+        .back-link { display: inline-block; margin-bottom: 20px; color: #2563eb; text-decoration: none; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+        
+        h2 { color: #0f172a; font-size: 32px; margin-top: 0; margin-bottom: 15px; }
+        
+        .project-tags { margin-bottom: 30px; border-bottom: 2px solid #eff6ff; padding-bottom: 20px; }
+        .tag { background: #eff6ff; color: #2563eb; padding: 6px 12px; border-radius: 6px; font-size: 14px; font-weight: 600; margin-right: 10px; display: inline-block; }
+        
+        .content-section { margin-bottom: 30px; }
+        h3 { color: #0f172a; font-size: 22px; }
+        p { color: #475569; line-height: 1.7; font-size: 16px; }
+        
+        /* Style pour les images du projet */
+        .project-image { width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; margin: 20px 0; border: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clément</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À propos</a>
+            <a href="cv.html">Mon CV</a>
+            <a href="projets.html">Projets</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="projets.html" class="back-link">← Retour aux projets</a>
+        
+        <h2>Instrumentation & Automatisation (Safran)</h2>
+        
+        <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Tkinter</span>
+            <span class="tag">Yoctopuce</span>
+            <span class="tag">Génération PDF/Excel</span>
+        </div>
+
+        <div class="content-section">
+            <h3>Contexte du projet</h3>
+            <p>Dans le cadre de mon alternance chez Safran Additive Manufacturing Campus au Haillan, j'ai été chargé de moderniser et d'automatiser les protocoles de mesure sur les bancs de test du service de maintenance.</p>
+        </div>
+
+        <!-- Remplace le src par le nom de ta photo, ex: interface-python.png -->
+        <img src="https://via.placeholder.com/900x450?text=Photo+de+l+interface+ou+du+banc+de+test" alt="Interface Python Tkinter" class="project-image">
+
+        <div class="content-section">
+            <h3>Développement & Défis Techniques</h3>
+            <p>J'ai développé une interface graphique complète en Python à l'aide de la bibliothèque Tkinter. Le principal défi technique résidait dans l'interfaçage direct avec les modules Yoctopuce pour récupérer les données physiques en temps réel.</p>
+            <p>Le programme permet de lancer les cycles de test, de visualiser les courbes d'acquisition et, à l'issue de la procédure, de générer de manière totalement autonome des rapports de maintenance formatés en PDF et en Excel.</p>
+        </div>
+        
+        <div class="content-section">
+            <h3>Résultats obtenus</h3>
+            <p>Cette solution a permis de réduire significativement le temps de traitement des données post-essais et d'éliminer les erreurs de saisie manuelle dans les rapports de maintenance.</p>
+        </div>
+    </div>
+
+</body>
+</html>
