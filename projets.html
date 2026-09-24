@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clément - Projet Safran</title>
+    <title>Clément - Projets</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
         
@@ -14,23 +14,49 @@
         nav { margin-top: 15px; }
         nav a { text-decoration: none; color: #64748b; font-weight: 600; margin: 0 15px; padding: 5px 10px; transition: color 0.3s ease; }
         nav a:hover { color: #2563eb; }
+        nav a.active { color: #2563eb; border-bottom: 2px solid #2563eb; }
         
-        .container { max-width: 900px; margin: 50px auto; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        h2 { color: #0f172a; text-align: center; font-size: 32px; margin-bottom: 40px; }
         
-        .back-link { display: inline-block; margin-bottom: 20px; color: #2563eb; text-decoration: none; font-weight: 600; }
-        .back-link:hover { text-decoration: underline; }
+        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
         
-        h2 { color: #0f172a; font-size: 32px; margin-top: 0; margin-bottom: 15px; }
+        /* Style des cadres pour qu'ils soient cliquables */
+        .project-card { 
+            display: block; /* Rend toute la zone cliquable */
+            text-decoration: none; /* Enlève le soulignement classique des liens */
+            color: inherit;
+            background: white; 
+            border-radius: 12px; 
+            padding: 30px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
+            border-left: 5px solid #2563eb; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            cursor: pointer; 
+        }
         
-        .project-tags { margin-bottom: 30px; border-bottom: 2px solid #eff6ff; padding-bottom: 20px; }
-        .tag { background: #eff6ff; color: #2563eb; padding: 6px 12px; border-radius: 6px; font-size: 14px; font-weight: 600; margin-right: 10px; display: inline-block; }
+        .project-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+        }
         
-        .content-section { margin-bottom: 30px; }
-        h3 { color: #0f172a; font-size: 22px; }
-        p { color: #475569; line-height: 1.7; font-size: 16px; }
-        
-        /* Style pour les images du projet */
-        .project-image { width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; margin: 20px 0; border: 1px solid #e2e8f0; }
+        /* Petit texte "Voir les détails" qui apparaît au survol */
+        .project-card::after { 
+            content: "Voir les détails ➔"; 
+            display: block; 
+            margin-top: 15px; 
+            color: #2563eb; 
+            font-weight: 600; 
+            font-size: 14px; 
+            opacity: 0; 
+            transition: opacity 0.3s; 
+        }
+        .project-card:hover::after { opacity: 1; }
+
+        .project-title { font-size: 22px; color: #0f172a; margin-top: 0; margin-bottom: 10px; }
+        .project-tags { margin-bottom: 15px; }
+        .tag { background: #eff6ff; color: #2563eb; padding: 5px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-right: 8px; display: inline-block; }
+        .project-desc { color: #475569; line-height: 1.6; margin-bottom: 0; }
     </style>
 </head>
 <body>
@@ -41,39 +67,53 @@
             <a href="index.html">Accueil</a>
             <a href="apropos.html">À propos</a>
             <a href="cv.html">Mon CV</a>
-            <a href="projets.html">Projets</a>
+            <a href="projets.html" class="active">Projets</a>
         </nav>
     </header>
 
     <div class="container">
-        <a href="projets.html" class="back-link">← Retour aux projets</a>
+        <h2>Mes Réalisations</h2>
         
-        <h2>Instrumentation & Automatisation (Safran)</h2>
-        
-        <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Tkinter</span>
-            <span class="tag">Yoctopuce</span>
-            <span class="tag">Génération PDF/Excel</span>
-        </div>
+        <div class="projects-grid">
+            
+            <!-- CADRE 1 : Cliquable vers projet-safran.html -->
+            <a href="projet-safran.html" class="project-card">
+                <h3 class="project-title">Instrumentation & Automatisation (Safran)</h3>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Tkinter</span>
+                    <span class="tag">Yoctopuce</span>
+                </div>
+                <p class="project-desc">
+                    Développement d'une application d'interface Python (Tkinter) intégrant des capteurs Yoctopuce pour automatiser des protocoles de mesure sur des bancs de test en fabrication additive.
+                </p>
+            </a>
 
-        <div class="content-section">
-            <h3>Contexte du projet</h3>
-            <p>Dans le cadre de mon alternance chez Safran Additive Manufacturing Campus au Haillan, j'ai été chargé de moderniser et d'automatiser les protocoles de mesure sur les bancs de test du service de maintenance.</p>
-        </div>
+            <!-- CADRE 2 : Cliquable vers projet-robotique.html -->
+            <a href="projet-robotique.html" class="project-card">
+                <h3 class="project-title">Développement Robotique Autonome</h3>
+                <div class="project-tags">
+                    <span class="tag">ROS2</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">RoboDK</span>
+                </div>
+                <p class="project-desc">
+                    Programmation d'un robot autonome TurtleBot4 (ROS2, suivi de couleurs via OpenCV) et simulation de bras robotiques industriels avec RoboDK et NumPy.
+                </p>
+            </a>
 
-        <!-- Remplace le src par le nom de ta photo, ex: interface-python.png -->
-        <img src="https://via.placeholder.com/900x450?text=Photo+de+l+interface+ou+du+banc+de+test" alt="Interface Python Tkinter" class="project-image">
+            <!-- CADRE 3 : Cliquable vers projet-web.html -->
+            <a href="projet-web.html" class="project-card">
+                <h3 class="project-title">Développement Web & E-commerce</h3>
+                <div class="project-tags">
+                    <span class="tag">HTML/CSS/JS</span>
+                    <span class="tag">Shopify Liquid</span>
+                </div>
+                <p class="project-desc">
+                    Conception et personnalisation de plateformes e-commerce pour la vente de pièces d'horlogerie vintage avec modification de templates via le langage Liquid.
+                </p>
+            </a>
 
-        <div class="content-section">
-            <h3>Développement & Défis Techniques</h3>
-            <p>J'ai développé une interface graphique complète en Python à l'aide de la bibliothèque Tkinter. Le principal défi technique résidait dans l'interfaçage direct avec les modules Yoctopuce pour récupérer les données physiques en temps réel.</p>
-            <p>Le programme permet de lancer les cycles de test, de visualiser les courbes d'acquisition et, à l'issue de la procédure, de générer de manière totalement autonome des rapports de maintenance formatés en PDF et en Excel.</p>
-        </div>
-        
-        <div class="content-section">
-            <h3>Résultats obtenus</h3>
-            <p>Cette solution a permis de réduire significativement le temps de traitement des données post-essais et d'éliminer les erreurs de saisie manuelle dans les rapports de maintenance.</p>
         </div>
     </div>
 
