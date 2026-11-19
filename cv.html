@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément - CV & Dossier</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: #f8f9fa; color: #212529; }
+        
+        header { background: #ffffff; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
+        header h1 { margin: 0; font-size: 24px; color: #0f172a; letter-spacing: 1px; }
+        nav { margin-top: 15px; }
+        nav a { text-decoration: none; color: #64748b; font-weight: 600; margin: 0 15px; padding: 5px 10px; transition: color 0.3s ease; }
+        nav a:hover { color: #2563eb; }
+        nav a.active { color: #2563eb; border-bottom: 2px solid #2563eb; }
+        
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        h2 { color: #0f172a; text-align: center; font-size: 32px; margin-bottom: 10px; }
+        .intro { text-align: center; color: #64748b; margin-bottom: 45px; }
+
+        .section-title { color: #0f172a; font-size: 20px; margin: 35px 0 18px 0; border-left: 4px solid #2563eb; padding-left: 12px; }
+
+        /* Grille de documents adaptable mobile/PC */
+        .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+        /* Carte Document */
+        .doc-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #e2e8f0; }
+        .doc-card h4 { margin: 0 0 8px 0; font-size: 18px; color: #0f172a; }
+        .doc-card p { margin: 0 0 20px 0; font-size: 14px; color: #475569; line-height: 1.5; }
+
+        /* Bouton actif (PDF prêt) */
+        .btn-pdf { display: inline-block; text-align: center; background: #2563eb; color: white; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.3s ease; }
+        .btn-pdf:hover { background: #1d4ed8; }
+
+        /* Bouton d'attente (PDF pas encore ajouté) */
+        .btn-pending { display: inline-block; text-align: center; background: #f1f5f9; color: #64748b; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 14px; border: 1px dashed #cbd5e1; cursor: default; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clément</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À propos</a>
+            <a href="cv.html" class="active">CV & Dossier</a>
+            <a href="projets.html">Projets</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Mon Dossier de Candidature</h2>
+        <p class="intro">Retrouvez ici l'ensemble de mes documents professionnels et académiques au format PDF.</p>
+
+        <!-- SECTION 1 : CV -->
+        <h3 class="section-title">Curriculum Vitae</h3>
+        <div class="docs-grid">
+            <div class="doc-card">
+                <div>
+                    <h4>CV Complet — Clément</h4>
+                    <p>Synthèse de ma formation (BUT Mesures Physiques, DU Robotique), de mon alternance chez Safran et de mes compétences techniques.</p>
+                </div>
+                <!-- Quand ton fichier cv.pdf sera uploadé, remplace la ligne span par la ligne <a> commentée en dessous -->
+                <span class="btn-pending">Bientôt disponible (PDF)</span>
+                <!-- <a href="cv.pdf" target="_blank" class="btn-pdf">Ouvrir le CV (PDF)</a> -->
+            </div>
+        </div>
+
+        <!-- SECTION 2 : RECOMMANDATIONS & AVIS -->
+        <h3 class="section-title">Lettres de recommandation & Avis</h3>
+        <div class="docs-grid">
+            <div class="doc-card">
+                <div>
+                    <h4>Recommandation — Entreprise (Safran)</h4>
+                    <p>Lettre de recommandation de mon tuteur d'alternance au sein du service maintenance de Safran Additive Manufacturing Campus.</p>
+                </div>
+                <span class="btn-pending">Bientôt disponible (PDF)</span>
+                <!-- <a href="reco-safran.pdf" target="_blank" class="btn-pdf">Consulter la lettre (PDF)</a> -->
+            </div>
+
+            <div class="doc-card">
+                <div>
+                    <h4>Recommandation — Enseignant / IUT</h4>
+                    <p>Appréciation académique portant sur mes résultats, mon implication en TP et mes projets de BUT Mesures Physiques.</p>
+                </div>
+                <span class="btn-pending">Bientôt disponible (PDF)</span>
+                <!-- <a href="reco-iut.pdf" target="_blank" class="btn-pdf">Consulter la lettre (PDF)</a> -->
+            </div>
+
+            <div class="doc-card">
+                <div>
+                    <h4>Avis de poursuite d'études</h4>
+                    <p>Fiche d'avis officiel émise par l'équipe pédagogique de l'IUT de Bordeaux pour les admissions en écoles d'ingénieurs.</p>
+                </div>
+                <span class="btn-pending">Bientôt disponible (PDF)</span>
+                <!-- <a href="avis-poursuite.pdf" target="_blank" class="btn-pdf">Consulter l'avis (PDF)</a> -->
+            </div>
+        </div>
+
+        <!-- SECTION 3 : MOTIVATION -->
+        <h3 class="section-title">Projet professionnel & Motivation</h3>
+        <div class="docs-grid">
+            <div class="doc-card">
+                <div>
+                    <h4>Lettre de motivation — Cycle Ingénieur</h4>
+                    <p>Présentation de mon projet d'orientation, de mes objectifs professionnels et de ce qui motive ma candidature en école d'ingénieurs.</p>
+                </div>
+                <span class="btn-pending">Bientôt disponible (PDF)</span>
+                <!-- <a href="lettre-motivation.pdf" target="_blank" class="btn-pdf">Lire la lettre (PDF)</a> -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
