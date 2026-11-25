@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément - Engagements Associatifs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: #f8f9fa; color: #212529; }
+        
+        /* Barre de navigation */
+        header { background: #ffffff; padding: 20px 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
+        header h1 { margin: 0; font-size: 24px; color: #0f172a; letter-spacing: 1px; }
+        nav { margin-top: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+        nav a { text-decoration: none; color: #64748b; font-weight: 600; padding: 5px 12px; transition: color 0.3s ease; }
+        nav a:hover { color: #2563eb; }
+        nav a.active { color: #2563eb; border-bottom: 2px solid #2563eb; }
+        
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        h2 { color: #0f172a; text-align: center; font-size: 32px; margin-bottom: 10px; }
+        .intro { text-align: center; color: #64748b; max-width: 680px; margin: 0 auto 45px auto; line-height: 1.6; }
+
+        /* Cartes d'engagement */
+        .engagement-list { display: flex; flex-direction: column; gap: 30px; }
+        .engagement-card { background: white; border-radius: 12px; padding: 35px 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-left: 5px solid #2563eb; }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 15px; }
+        .role-badge { display: inline-block; background: #eff6ff; color: #2563eb; padding: 5px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+        .engagement-card h3 { margin: 0; color: #0f172a; font-size: 22px; }
+        .date-tag { color: #64748b; font-size: 14px; font-weight: 600; background: #f1f5f9; padding: 6px 12px; border-radius: 6px; }
+        
+        .engagement-card p { color: #475569; line-height: 1.7; margin: 0 0 15px 0; }
+        
+        /* Liste des actions concrètes */
+        .actions-list { margin: 0 0 20px 0; padding-left: 20px; color: #475569; line-height: 1.7; }
+        .actions-list li { margin-bottom: 6px; }
+
+        /* Image optionnelle */
+        .engagement-img { width: 100%; max-height: 360px; object-fit: cover; border-radius: 8px; margin: 15px 0 20px 0; border: 1px solid #e2e8f0; }
+
+        /* Tags savoir-être / compétences */
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: #f8fafc; color: #334155; border: 1px solid #e2e8f0; padding: 5px 11px; border-radius: 6px; font-size: 12.5px; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clément</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À propos</a>
+            <a href="alternance.html">Alternance</a>
+            <a href="projets.html">Projets</a>
+            <a href="engagements.html" class="active">Engagements</a>
+            <a href="cv.html">CV & Dossier</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Engagements Associatifs</h2>
+        <p class="intro">
+            S'investir au sein d'associations me permet de développer mon sens des responsabilités, le travail en équipe et la gestion de projets concrets au service d'un collectif.
+        </p>
+
+        <div class="engagement-list">
+
+            <!-- ENGAGEMENT 1 (À personnaliser) -->
+            <article class="engagement-card">
+                <div class="card-header">
+                    <div>
+                        <span class="role-badge">Ton rôle (ex : Trésorier / Membre actif / Bénévole)</span>
+                        <h3>Nom de l'association 1</h3>
+                    </div>
+                    <span class="date-tag">2024 – Aujourd'hui</span>
+                </div>
+
+                <p>
+                    Présente en 2 ou 3 phrases l'objectif de l'association et ce qui t'a motivé à la rejoindre.
+                </p>
+
+                <ul class="actions-list">
+                    <li>Action concrète réalisée (ex : organisation d'un événement réunissant X participants).</li>
+                    <li>Responsabilité tenue (ex : gestion logistique, partenariats, budget ou communication).</li>
+                    <li>Impact ou résultat obtenu au sein de l'équipe.</li>
+                </ul>
+
+                <!-- Décommente la ligne ci-dessous une fois ta photo uploadée sur GitHub -->
+                <!-- <img src="photo-asso-1.jpg" alt="Engagement associatif" class="engagement-img"> -->
+
+                <div class="tags">
+                    <span class="tag">Gestion de projet</span>
+                    <span class="tag">Travail d'équipe</span>
+                    <span class="tag">Organisation</span>
+                </div>
+            </article>
+
+            <!-- ENGAGEMENT 2 (À personnaliser ou supprimer si tu n'en as qu'un) -->
+            <article class="engagement-card">
+                <div class="card-header">
+                    <div>
+                        <span class="role-badge">Ton rôle (ex : Bénévole / Encadrant / Tuteur)</span>
+                        <h3>Nom de l'association 2</h3>
+                    </div>
+                    <span class="date-tag">2023 – 2025</span>
+                </div>
+
+                <p>
+                    Décris brièvement le contexte de cet engagement et les missions que tu y as assurées.
+                </p>
+
+                <ul class="actions-list">
+                    <li>Première mission ou réalisation marquante.</li>
+                    <li>Deuxième mission ou compétence mobilisée sur le terrain.</li>
+                </ul>
+
+                <!-- <img src="photo-asso-2.jpg" alt="Engagement associatif" class="engagement-img"> -->
+
+                <div class="tags">
+                    <span class="tag">Leadership</span>
+                    <span class="tag">Communication</span>
+                    <span class="tag">Esprit d'initiative</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+</body>
+</html>
